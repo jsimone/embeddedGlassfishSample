@@ -1,1 +1,3 @@
-some explanation for our project with update
+This is a JEE6 full sample with JSF2.0, EJB3.1 and JPA2.0 based on the post at http://weblogs.java.net/blog/2009/07/24/jsf-20-jpa-glassfish-and-mysql, but this source code is decoupled from any IDE and is based on Maven, and can be deployed on both GlassFish and JBoss.
+
+For a full explanation on how to get it built and run, please go to http://www.tikalk.com/java/your-first-jee6-project-with-ejb-light-jpa-20-and-jsf-20-jbossas-6
