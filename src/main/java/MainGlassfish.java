@@ -62,6 +62,7 @@ public class MainGlassfish {
         CommandResult result = runner.run("create-jdbc-connection-pool", "--datasourceclassname", "org.postgresql.ds.PGSimpleDataSource", "--restype", "javax.sql.DataSource", 
         		//"--property", "url='" + dbUrl + "'", 
         		//"--property", "user=user:password=postgres:databasename=petclinic:server=localhost:port=5432",
+        		"--steadypoolsize", "1",
         		"--maxpoolsize", "1",
         		"--property", properties,
         		"app/jdbc/petcatalog_pool");
