@@ -54,6 +54,10 @@
                             <mainClass>MainGlassfish</mainClass>
                             <name>webapp</name>
                         </program>
+                        <program>
+                            <mainClass>Main</mainClass>
+                            <name>dbTest</name>
+                        </program>
                     </programs>
                 </configuration>
                 <executions>
