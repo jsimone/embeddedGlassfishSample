@@ -7,6 +7,7 @@ package controller;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.sql.DataSourceDefinition;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,13 +15,26 @@ import javax.persistence.Query;
 
 import model.Item;
 
+//@DataSourceDefinition(name = "java:app/jdbc/petcatalog",
+//	      minPoolSize = 0,
+//	      initialPoolSize = 0,
+//	      className = "org.postgresql.ds.PGSimpleDataSource",
+//	      user = "postgres",
+//	      password = "postgres",
+//	      portNumber = 5432,
+//	      databaseName = "petclinic",
+//	      serverName = "localhost",
+//	      url = Util.url,
+//	      properties = {"connectionAttributes=;create=true"}
+//	   )
+
 /**
  *
  * @author caroljmcdonald
  */
 @Stateless
 public class ItemFacade implements Serializable {
-
+	
     @PersistenceContext(unitName = "catalogPU")
     private EntityManager em;
 
