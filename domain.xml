@@ -1,0 +1,15 @@
+<domain>
+   <applications />
+   <resources>
+      <jdbc-resource jndi-name="jdbc/petclinic" pool-name="PetclinicPool"
+         object-type="user" enabled="true"/>
+      <jdbc-connection-pool datasource-classname="org.postgresql.ds.PGSimpleDataSource"
+         name="PetclinicPool" res-type="javax.sql.DataSource">
+         <property name="Password" value="postgres"/>
+         <property name="User" value="postgres"/>
+         <property name="serverName" value="localhost"/>
+         <property name="DatabaseName" value="petclinic"/>
+         <property name="url" value="jdbc:postgresql://localhost/petclinic"/>
+      </jdbc-connection-pool>
+   </resources>
+</domain>
