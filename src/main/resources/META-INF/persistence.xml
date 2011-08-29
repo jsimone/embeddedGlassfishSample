@@ -3,7 +3,8 @@
   <persistence-unit name="catalogPU" transaction-type="JTA">
     <jta-data-source>app/jdbc/petcatalog</jta-data-source>
 <!--    <jta-data-source>java:/petcatalog</jta-data-source>-->
-    <property name="eclipselink.logging.level" value="FINEST"/>
-    <properties/>
+    <properties>
+    	    <property name="eclipselink.logging.level" value="FINEST"/>
+	</properties>
   </persistence-unit>
 </persistence>
