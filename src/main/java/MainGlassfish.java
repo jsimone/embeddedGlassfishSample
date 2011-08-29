@@ -74,9 +74,9 @@ public class MainGlassfish {
 	    
         System.out.println("------output of create jdbc: " + result.getOutput());
 
-        result = runner.run("set-log-level", "javax.enterprise.system.container.web=FINE");
-        
-        System.out.println("------output of set log level: " + result.getOutput());
+//        result = runner.run("set-log-level", "javax.enterprise.system.container.web=INFO:javax.enterprise.system.container.ejb=FINEST");
+//        
+//        System.out.println("------output of set log level: " + result.getOutput());
 	    
 		Deployer deployer = glassfish.getDeployer();
 
