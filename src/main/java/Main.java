@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,12 +13,13 @@ public class Main {
 
     static {
         dbUrl = System.getenv("DATABASE_URL");
-        dbUrl = dbUrl.replaceAll("postgres://(.*):(.*)@(.*)", "jdbc:postgresql://$3?user=$1&password=$2");
+        dbUrl = dbUrl.replaceAll("postgres://(.*):(.*)@(.*)", "jdbc:postgresql://$3?user=$1&password=$2&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory");
     }
 
     private static void dbUpdate(String sql) throws SQLException {
         Connection dbConn = null;
         try {
+        	DriverManager.setLogWriter(new PrintWriter(System.out));
             dbConn = DriverManager.getConnection(dbUrl);
             Statement stmt = dbConn.createStatement();
             stmt.executeUpdate(sql);
@@ -41,6 +43,7 @@ public class Main {
     public static int getScalarValue(String sql) throws SQLException {
         Connection dbConn = null;
         try {
+        	DriverManager.setLogWriter(new PrintWriter(System.out));
             dbConn = DriverManager.getConnection(dbUrl);
             Statement stmt = dbConn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);

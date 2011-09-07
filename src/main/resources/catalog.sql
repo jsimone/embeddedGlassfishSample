@@ -1,8 +1,3 @@
-
-    
-
-
-
 CREATE TABLE item (
  id INT NOT NULL,
  product_id INT NOT NULL,
