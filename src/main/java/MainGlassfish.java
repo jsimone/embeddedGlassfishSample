@@ -54,7 +54,7 @@ public class MainGlassfish {
         String user = matcher.group(1);
         String password = matcher.group(2);
         
-        String properties = "user=" + user + ":password=" + password + ":databasename=" + database + ":loglevel=4:server=" + host;
+        String properties = "user=" + user + ":password=" + password + ":databasename=" + database + ":loglevel=4:servername=" + host;
         
 	    
         System.out.println("-------properties: " + properties);
